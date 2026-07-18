@@ -11,11 +11,8 @@
     box-sizing: border-box;
 }
 
-
 body {
-
     position: relative;
-
     margin: 0;
     min-height: 100vh;
 
@@ -37,16 +34,11 @@ body {
     animation: gradient 12s ease infinite;
 
     color: white;
-
     overflow: hidden;
 }
 
 
-
-/* Background animation */
-
 @keyframes gradient {
-
     0% {
         background-position: 0% 50%;
     }
@@ -58,12 +50,10 @@ body {
     100% {
         background-position: 0% 50%;
     }
-
 }
 
 
-
-/* Green glow */
+/* Fulger stanga */
 
 body::before {
 
@@ -71,25 +61,30 @@ body::before {
 
     position: absolute;
 
-    width: 500px;
-    height: 500px;
+    left: 40px;
+    top: 50%;
 
-    background: radial-gradient(
-        circle,
-        rgba(0,255,180,0.25),
-        transparent 70%
+    width: 5px;
+    height: 250px;
+
+    background: linear-gradient(
+        transparent,
+        #00ffff,
+        white,
+        #00ff99,
+        transparent
     );
 
-    top: -150px;
-    left: -150px;
+    box-shadow:
+        0 0 15px #00ffff,
+        0 0 40px #00ffff;
 
-    filter: blur(40px);
+    animation: lightning 2s infinite;
 
 }
 
 
-
-/* Blue glow */
+/* Fulger dreapta */
 
 body::after {
 
@@ -97,74 +92,85 @@ body::after {
 
     position: absolute;
 
-    width: 500px;
-    height: 500px;
+    right: 40px;
+    top: 50%;
 
-    background: radial-gradient(
-        circle,
-        rgba(0,120,255,0.3),
-        transparent 70%
+    width: 5px;
+    height: 250px;
+
+    background: linear-gradient(
+        transparent,
+        #00aaff,
+        white,
+        #00ff99,
+        transparent
     );
 
-    bottom: -150px;
-    right: -150px;
+    box-shadow:
+        0 0 15px #00aaff,
+        0 0 40px #00aaff;
 
-    filter: blur(50px);
+    animation: lightning 2s infinite reverse;
 
 }
 
 
 
-/* Main card */
+@keyframes lightning {
+
+    0%,100% {
+        opacity: 0.3;
+        transform: scaleY(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+}
+
+
+/* Card */
 
 .card {
 
     position: relative;
-
-    z-index: 1;
-
+    z-index: 2;
 
     width: 360px;
 
-    padding: 35px;
+    padding: 25px;
 
     text-align: center;
-
 
     background: rgba(255,255,255,0.08);
 
     backdrop-filter: blur(15px);
 
-
     border-radius: 20px;
-
 
     border: 1px solid rgba(255,255,255,0.15);
 
-
     box-shadow:
-
-        0 0 40px rgba(0,255,200,0.15);
+        0 0 40px rgba(0,255,200,0.2);
 
 }
 
 
-
-/* Title */
+/* Titlu */
 
 h1 {
 
     font-size: 38px;
 
-    margin-bottom: 10px;
-
+    margin: 0 0 10px;
 
     background: linear-gradient(
         90deg,
         #00ff99,
         #00aaff
     );
-
 
     -webkit-background-clip: text;
 
@@ -173,32 +179,27 @@ h1 {
 }
 
 
-
-/* Description */
-
 p {
 
-    color: #cccccc;
+    margin: 10px 0 20px;
 
-    font-size: 15px;
+    color: #cccccc;
 
 }
 
 
 
-/* Buttons */
+/* Butoane */
 
 a {
 
     display: block;
 
-    margin: 15px 0;
+    margin: 12px 0;
 
-    padding: 14px;
-
+    padding: 12px;
 
     border-radius: 12px;
-
 
     background: linear-gradient(
         90deg,
@@ -206,30 +207,22 @@ a {
         #00ff99
     );
 
-
     color: white;
 
     text-decoration: none;
 
-
     font-weight: bold;
-
 
     transition: 0.3s;
 
 }
 
 
-
-/* Hover effect */
-
 a:hover {
 
     transform: scale(1.05);
 
-
     box-shadow:
-
         0 0 20px #00ffaa;
 
 }
@@ -242,40 +235,28 @@ a:hover {
 
 <body>
 
-
 <div class="card">
 
-
 <h1>Raicea</h1>
-
 
 <p>
 Developer of PcCleaner<br>
 Building software and creative projects.
 </p>
 
-
-
 <a href="https://github.com/raicea">
 GitHub
 </a>
-
-
 
 <a href="https://www.instagram.com/raicea_andrei/">
 Instagram
 </a>
 
-
-
 <a href="https://www.tiktok.com/@raicea69">
 TikTok
 </a>
 
-
-
 </div>
-
 
 </body>
 

@@ -1,60 +1,99 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <title>Raicea</title>
+
+
 
 <style>
 
-* {
-    box-sizing: border-box;
-}
+
 
 body {
 
     margin: 0;
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
+
 
     font-family: "Segoe UI", sans-serif;
 
+
+
     background: linear-gradient(
+
         135deg,
+
         #020617,
+
         #003b3b,
+
         #001b40,
+
         #020617
+
     );
 
+
+
     background-size: 400% 400%;
+
     animation: gradient 12s ease infinite;
 
+
+
     color: white;
+
     overflow: hidden;
+
 }
 
 
-/* Animatie fundal */
+
+
+
 @keyframes gradient {
 
     0% {
+
         background-position: 0% 50%;
+
     }
+
+
 
     50% {
+
         background-position: 100% 50%;
+
     }
 
+
+
     100% {
+
         background-position: 0% 50%;
+
     }
 
 }
 
 
-/* Lumina verde */
+
+
+
+/* fulgere / lumini */
+
 body::before {
 
     content: "";
@@ -62,23 +101,37 @@ body::before {
     position: absolute;
 
     width: 500px;
+
     height: 500px;
 
+
+
     background: radial-gradient(
+
         circle,
+
         rgba(0,255,180,0.25),
+
         transparent 70%
+
     );
 
-    top: -150px;
-    left: -150px;
+
+
+    top: -100px;
+
+    left: -100px;
+
+
 
     filter: blur(40px);
 
 }
 
 
-/* Lumina albastra */
+
+
+
 body::after {
 
     content: "";
@@ -86,40 +139,69 @@ body::after {
     position: absolute;
 
     width: 500px;
+
     height: 500px;
 
+
+
     background: radial-gradient(
+
         circle,
+
         rgba(0,120,255,0.3),
+
         transparent 70%
+
     );
 
-    bottom: -150px;
-    right: -150px;
+
+
+    bottom: -100px;
+
+    right: -100px;
+
+
 
     filter: blur(50px);
 
 }
 
 
-/* Card principal */
+
+
+
+
+
 .card {
 
-    width: 360px;
+
+
+    width: 350px;
+
+
 
     padding: 35px;
+
+
 
     text-align: center;
 
 
+
     background: rgba(255,255,255,0.08);
+
+
 
     backdrop-filter: blur(15px);
 
 
+
     border-radius: 20px;
 
+
+
     border: 1px solid rgba(255,255,255,0.15);
+
 
 
     box-shadow:
@@ -127,116 +209,175 @@ body::after {
         0 0 40px rgba(0,255,200,0.15);
 
 
+
 }
 
 
-/* Titlu */
+
+
 
 h1 {
 
-    font-size: 38px;
 
-    margin-bottom: 10px;
+
+    font-size: 35px;
+
 
 
     background: linear-gradient(
+
         90deg,
+
         #00ff99,
+
         #00aaff
+
     );
+
 
 
     -webkit-background-clip: text;
 
+
+
     color: transparent;
 
-}
 
-
-/* Text */
-
-p {
-
-    color: #cccccc;
-
-    font-size: 15px;
 
 }
 
 
-/* Butoane */
+
+
+
+
 
 a {
 
-    display: block;
-
-    margin: 15px 0;
-
-    padding: 14px;
 
 
-    border-radius: 12px;
+    display:block;
 
 
-    background: linear-gradient(
+
+    margin:15px 0;
+
+
+
+    padding:14px;
+
+
+
+    border-radius:12px;
+
+
+
+    background:
+
+    linear-gradient(
+
         90deg,
+
         #00aaff,
+
         #00ff99
+
     );
 
 
-    color: white;
 
-    text-decoration: none;
-
-
-    font-weight: bold;
+    color:white;
 
 
-    transition: 0.3s;
+
+    text-decoration:none;
+
+
+
+    font-weight:bold;
+
+
+
+    transition:0.3s;
+
+
 
 }
 
 
-/* Efect mouse */
+
+
 
 a:hover {
 
-    transform: scale(1.05);
+
+
+    transform:scale(1.05);
+
 
 
     box-shadow:
 
-        0 0 20px #00ffaa;
+    0 0 20px #00ffaa;
+
+
 
 }
 
 
+
 </style>
+
+
 
 </head>
 
+
+
 <body>
+
+
 
 <div class="card">
 
+
+
 <h1>Raicea</h1>
+
+
 
 <p>Developer of PcCleaner</p>
 
+
+
 <a href="https://github.com/raicea">
+
 GitHub
+
 </a>
+
+
 
 <a href="https://www.instagram.com/raicea_andrei/">
+
 Instagram
+
 </a>
 
+
+
 <a href="https://www.tiktok.com/@raicea69">
+
 TikTok
+
 </a>
+
+
 
 </div>
 
+
+
 </body>
+
 </html>

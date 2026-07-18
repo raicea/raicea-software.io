@@ -1,98 +1,69 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
 
 <title>Raicea</title>
 
-
-
 <style>
 
+* {
+    box-sizing: border-box;
+}
 
 
 body {
 
-    margin: 0;
+    position: relative;
 
+    margin: 0;
     min-height: 100vh;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
-
 
     font-family: "Segoe UI", sans-serif;
 
-
-
     background: linear-gradient(
-
         135deg,
-
         #020617,
-
         #003b3b,
-
         #001b40,
-
         #020617
-
     );
 
-
-
     background-size: 400% 400%;
-
     animation: gradient 12s ease infinite;
-
-
 
     color: white;
 
     overflow: hidden;
-
 }
 
 
 
-
+/* Background animation */
 
 @keyframes gradient {
 
     0% {
-
         background-position: 0% 50%;
-
     }
-
-
 
     50% {
-
         background-position: 100% 50%;
-
     }
 
-
-
     100% {
-
         background-position: 0% 50%;
-
     }
 
 }
 
 
 
-
-
-/* fulgere / lumini */
+/* Green glow */
 
 body::before {
 
@@ -101,28 +72,16 @@ body::before {
     position: absolute;
 
     width: 500px;
-
     height: 500px;
 
-
-
     background: radial-gradient(
-
         circle,
-
         rgba(0,255,180,0.25),
-
         transparent 70%
-
     );
 
-
-
-    top: -100px;
-
-    left: -100px;
-
-
+    top: -150px;
+    left: -150px;
 
     filter: blur(40px);
 
@@ -130,7 +89,7 @@ body::before {
 
 
 
-
+/* Blue glow */
 
 body::after {
 
@@ -139,28 +98,16 @@ body::after {
     position: absolute;
 
     width: 500px;
-
     height: 500px;
 
-
-
     background: radial-gradient(
-
         circle,
-
         rgba(0,120,255,0.3),
-
         transparent 70%
-
     );
 
-
-
-    bottom: -100px;
-
-    right: -100px;
-
-
+    bottom: -150px;
+    right: -150px;
 
     filter: blur(50px);
 
@@ -168,214 +115,166 @@ body::after {
 
 
 
-
-
-
+/* Main card */
 
 .card {
 
+    position: relative;
+
+    z-index: 1;
 
 
-    width: 350px;
-
-
+    width: 360px;
 
     padding: 35px;
-
-
 
     text-align: center;
 
 
-
     background: rgba(255,255,255,0.08);
 
-
-
     backdrop-filter: blur(15px);
-
 
 
     border-radius: 20px;
 
 
-
     border: 1px solid rgba(255,255,255,0.15);
-
 
 
     box-shadow:
 
         0 0 40px rgba(0,255,200,0.15);
 
-
-
 }
 
 
 
-
+/* Title */
 
 h1 {
 
+    font-size: 38px;
 
-
-    font-size: 35px;
-
+    margin-bottom: 10px;
 
 
     background: linear-gradient(
-
         90deg,
-
         #00ff99,
-
         #00aaff
-
     );
-
 
 
     -webkit-background-clip: text;
 
-
-
     color: transparent;
-
-
 
 }
 
 
 
+/* Description */
+
+p {
+
+    color: #cccccc;
+
+    font-size: 15px;
+
+}
 
 
 
+/* Buttons */
 
 a {
 
+    display: block;
+
+    margin: 15px 0;
+
+    padding: 14px;
 
 
-    display:block;
+    border-radius: 12px;
 
 
-
-    margin:15px 0;
-
-
-
-    padding:14px;
-
-
-
-    border-radius:12px;
-
-
-
-    background:
-
-    linear-gradient(
-
+    background: linear-gradient(
         90deg,
-
         #00aaff,
-
         #00ff99
-
     );
 
 
+    color: white;
 
-    color:white;
-
-
-
-    text-decoration:none;
+    text-decoration: none;
 
 
-
-    font-weight:bold;
-
+    font-weight: bold;
 
 
-    transition:0.3s;
-
-
+    transition: 0.3s;
 
 }
 
 
 
-
+/* Hover effect */
 
 a:hover {
 
-
-
-    transform:scale(1.05);
-
+    transform: scale(1.05);
 
 
     box-shadow:
 
-    0 0 20px #00ffaa;
-
-
+        0 0 20px #00ffaa;
 
 }
 
 
-
 </style>
 
-
-
 </head>
-
 
 
 <body>
 
 
-
 <div class="card">
-
 
 
 <h1>Raicea</h1>
 
 
-
-<p>Developer of PcCleaner</p>
+<p>
+Developer of PcCleaner<br>
+Building software and creative projects.
+</p>
 
 
 
 <a href="https://github.com/raicea">
-
 GitHub
-
 </a>
 
 
 
 <a href="https://www.instagram.com/raicea_andrei/">
-
 Instagram
-
 </a>
 
 
 
 <a href="https://www.tiktok.com/@raicea69">
-
 TikTok
-
 </a>
 
 
 
 </div>
-
 
 
 </body>

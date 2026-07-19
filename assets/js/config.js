@@ -43,8 +43,13 @@ const SITE = {
   },
 
   contact: {
-    supportEmail: "support@raicea.dev",
-    bugReportUrl: "https://github.com/raicea/PcCleaner/issues/new?template=bug_report.md",
-    featureRequestUrl: "https://github.com/raicea/PcCleaner/issues/new?template=feature_request.md"
+    supportEmail: "support.raicea@gmail.com",
+    // GitHub Issues cannot be used here: creating an issue always requires a signed-in GitHub
+    // account, even on a fully public repo, so a "no account needed" bug-report/feature-request
+    // button can never point at /issues/new. Plain mailto: works for every visitor, no account
+    // of any kind required. (The public issue *list*, i.e. no "/new", is fine without login —
+    // just not issue *creation*.)
+    bugReportUrl: "mailto:support.raicea@gmail.com?subject=" + encodeURIComponent("Bug report — PcCleaner"),
+    featureRequestUrl: "mailto:support.raicea@gmail.com?subject=" + encodeURIComponent("Feature request — PcCleaner")
   }
 };

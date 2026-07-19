@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing — Raicea Software</title>
+<meta name="description" content="PcCleaner pricing: Free, Pro, and what's coming next.">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+  .toggle-wrap { display:flex; align-items:center; justify-content:center; gap:14px; margin-bottom:48px; }
+  .toggle-switch { position:relative; width:52px; height:28px; background:var(--surface-2); border:1px solid var(--border); border-radius:999px; cursor:pointer; }
+  .toggle-switch .knob { position:absolute; top:2px; left:2px; width:22px; height:22px; border-radius:50%; background:linear-gradient(135deg, var(--blue), var(--green)); transition:transform 0.25s var(--ease); }
+  .toggle-switch.on .knob { transform:translateX(24px); }
+  .toggle-label { font-size:14px; color:var(--muted); }
+  .toggle-label.active { color:var(--text); font-weight:600; }
+  .save-badge { font-size:11px; font-weight:700; color:var(--green); background:rgba(74,222,128,.12); padding:3px 10px; border-radius:999px; }
+</style>
+</head>
+<body>
+<div class="bg-field"><div class="blob"></div></div>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/img/logo.png" alt="Raicea Software logo">Raicea Software</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="support.html">Support</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-actions">
+      <a href="downloads.html" class="btn btn-secondary">Download</a>
+      <a href="pricing.html" class="btn btn-primary">Buy Pro</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow reveal in-view">Pricing</span>
+      <h1 class="reveal in-view">Simple pricing, no surprise renewals</h1>
+      <p class="reveal in-view">Start free. Upgrade only if Pro's automation is worth it to you.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="toggle-wrap reveal in-view">
+        <span class="toggle-label active" id="labelMonthly">Monthly</span>
+        <div class="toggle-switch" id="billingToggle" role="switch" aria-checked="false" tabindex="0"><div class="knob"></div></div>
+        <span class="toggle-label" id="labelYearly">Yearly</span>
+        <span class="save-badge">Save 20%</span>
+      </div>
+
+      <div class="grid cols-3 reveal-stagger">
+
+        <div class="glass-card pricing-card reveal" style="--i:0">
+          <h3>Free</h3>
+          <div class="price">$0<span> / forever</span></div>
+          <div class="desc">Everything you need for day-to-day optimization.</div>
+          <ul>
+            <li><span class="check">✓</span> Cleanup, Memory &amp; Storage tools</li>
+            <li><span class="check">✓</span> Process Manager + smart suggestions</li>
+            <li><span class="check">✓</span> Live hardware monitoring dashboard</li>
+            <li><span class="check">✓</span> Startup &amp; Services management</li>
+            <li class="disabled"><span class="cross">–</span> Scheduled auto-optimization</li>
+            <li class="disabled"><span class="cross">–</span> Priority driver update alerts</li>
+            <li class="disabled"><span class="cross">–</span> Priority support</li>
+          </ul>
+          <a href="#" class="btn btn-secondary btn-block" data-download>Download Free</a>
+        </div>
+
+        <div class="glass-card pricing-card featured reveal" style="--i:1">
+          <span class="badge">Most popular</span>
+          <h3>Pro</h3>
+          <div class="price"><span class="price-monthly">$4.99</span><span class="price-yearly" style="display:none;">$3.99</span><span> / month</span></div>
+          <div class="desc">For people who want it fully automated and hands-off.</div>
+          <ul>
+            <li><span class="check">✓</span> Everything in Free</li>
+            <li><span class="check">✓</span> Scheduled auto-optimization</li>
+            <li><span class="check">✓</span> Priority driver update alerts</li>
+            <li><span class="check">✓</span> Advanced system tweak presets</li>
+            <li><span class="check">✓</span> PDF report history &amp; exports</li>
+            <li><span class="check">✓</span> Priority email support</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block buy-link" data-buy="monthly">Buy Pro</a>
+        </div>
+
+        <div class="glass-card pricing-card reveal" style="--i:2;opacity:0.7;">
+          <h3>Business <span class="badge-pill" style="margin-left:8px;">Future plan</span></h3>
+          <div class="price">Custom</div>
+          <div class="desc">Fleet management for multiple PCs — in planning.</div>
+          <ul>
+            <li><span class="check">✓</span> Everything in Pro</li>
+            <li><span class="check">✓</span> Centralized dashboard (planned)</li>
+            <li><span class="check">✓</span> Bulk license management (planned)</li>
+            <li class="disabled"><span class="cross">–</span> Not yet available</li>
+          </ul>
+          <a href="#" data-feature-request class="btn btn-secondary btn-block">Notify me</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPARISON ================= -->
+  <section>
+    <div class="container" style="max-width:900px;">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Compare</span>
+        <h2 class="section-title" style="margin-top:16px;">Free vs. Pro, in detail</h2>
+      </div>
+      <div class="glass-card reveal" style="padding:8px 32px;">
+        <ul>
+          <li style="display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--border-soft);"><span>Core optimization tools</span><span style="color:var(--green);">Free &amp; Pro</span></li>
+          <li style="display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--border-soft);"><span>Live hardware monitoring</span><span style="color:var(--green);">Free &amp; Pro</span></li>
+          <li style="display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--border-soft);"><span>Scheduled auto-optimization</span><span style="color:var(--muted);">Pro only</span></li>
+          <li style="display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--border-soft);"><span>Priority driver alerts</span><span style="color:var(--muted);">Pro only</span></li>
+          <li style="display:flex;justify-content:space-between;padding:18px 0;"><span>Priority support</span><span style="color:var(--muted);">Pro only</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq">
+    <div class="container" style="max-width:820px;">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Billing FAQ</span>
+        <h2 class="section-title" style="margin-top:16px;">Questions about pricing</h2>
+      </div>
+      <div class="reveal">
+        <div class="faq-item">
+          <button class="faq-q">Can I cancel anytime? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Yes. Pro is billed monthly or yearly with no long-term contract — cancel whenever you like.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Is there a free trial of Pro? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Free already includes the full optimization toolset — Pro is purely additive automation, so you can evaluate the core app risk-free first.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What payment methods are supported? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Checkout is handled by a payment provider (Stripe/Paddle/Lemon Squeezy) once billing goes live — card and major wallet payments will be supported.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><img src="assets/img/logo.png" alt="Raicea Software logo">Raicea Software</a>
+        <p>Real optimizations for Windows, built on official system tools. No bloat, no dark patterns — just software that respects your PC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="product-pccleaner.html">PcCleaner</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="downloads.html#release-notes">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="support.html#contact">Contact</a></li>
+          <li><a href="#" data-bug-report>Report a bug</a></li>
+          <li><a href="#" data-feature-request>Request a feature</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="support.html#faq">FAQ</a></li>
+          <li><a href="support.html#troubleshooting">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Raicea Software. All rights reserved.</span>
+      <span>Made for Windows 10 &amp; 11</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  (function () {
+    const toggle = document.getElementById("billingToggle");
+    const labelM = document.getElementById("labelMonthly");
+    const labelY = document.getElementById("labelYearly");
+    const priceM = document.querySelector(".price-monthly");
+    const priceY = document.querySelector(".price-yearly");
+    const buyLink = document.querySelector(".buy-link");
+    function setYearly(on) {
+      toggle.classList.toggle("on", on);
+      toggle.setAttribute("aria-checked", String(on));
+      labelM.classList.toggle("active", !on);
+      labelY.classList.toggle("active", on);
+      priceM.style.display = on ? "none" : "inline";
+      priceY.style.display = on ? "inline" : "none";
+      if (buyLink) buyLink.dataset.buy = on ? "yearly" : "monthly";
+      if (typeof SITE !== "undefined" && buyLink) {
+        buyLink.setAttribute("href", on ? SITE.checkout.proYearlyUrl : SITE.checkout.proMonthlyUrl);
+      }
+    }
+    toggle.addEventListener("click", () => setYearly(!toggle.classList.contains("on")));
+    toggle.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setYearly(!toggle.classList.contains("on")); } });
+  })();
+</script>
+</body>
+</html>

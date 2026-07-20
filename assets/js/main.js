@@ -143,5 +143,11 @@
     });
     document.querySelectorAll("[data-version]").forEach((el) => (el.textContent = SITE.product.version));
     document.querySelectorAll("[data-size]").forEach((el) => (el.textContent = SITE.product.sizeMb + " MB"));
+    document.querySelectorAll("[data-price-monthly]").forEach((el) => {
+      el.textContent = SITE.checkout.currencySymbol + SITE.checkout.priceMonthly.toFixed(2);
+    });
+    document.querySelectorAll("[data-price-yearly]").forEach((el) => {
+      el.textContent = SITE.checkout.currencySymbol + SITE.checkout.priceYearly.toFixed(2);
+    });
   }
 })();

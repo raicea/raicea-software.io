@@ -28,6 +28,10 @@ const SITE = {
   // button on the site reads from here, so switching providers is a one-file change.
   checkout: {
     provider: "none", // "stripe" | "paddle" | "lemonsqueezy"
+    currency: "EUR",
+    currencySymbol: "€",
+    priceMonthly: 2.99,
+    priceYearly: 2.39, // ~20% off monthly, matches the "Save 20%" badge on pricing.html
     proMonthlyUrl: "#",
     proYearlyUrl: "#",
     proLifetimeUrl: "#"
